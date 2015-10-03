@@ -1,7 +1,5 @@
-FROM ubuntu:15.04
+FROM gcc
 MAINTAINER Hugo Gonzalez Labrador
  
-
-RUN apt-get -y install build-essential
-
+WORKDIR dockerdojo
 RUN gcc ./main.c -o main
