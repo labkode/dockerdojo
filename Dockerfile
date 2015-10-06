@@ -1,8 +1,6 @@
-FROM gcc
-MAINTAINER Hugo Gonzalez Labrador
- 
-ADD ./main.c ./main.c
+FROM golang
 
-RUN gcc ./main.c -o main
+COPY main.go ./main.go
+RUN go build -o main ./main.go
 
-RUN ./main
+CMD ./main
